@@ -31,8 +31,10 @@
 
 - (CCScene *)startScene
 {
+    [[CCDirector sharedDirector] setDisplayStats:YES];
+
     return [CCBReader loadAsScene:@"MainScene"];
-}
+       }
 
 - (BOOL)onKeyUp:(int32_t)keyCode keyEvent:(AndroidKeyEvent *)event
 {

@@ -83,6 +83,11 @@
 			<key>previewFolderHidden</key>
 			<true/>
 		</dict>
+		<key>Prefabs</key>
+		<dict>
+			<key>previewFolderHidden</key>
+			<true/>
+		</dict>
 		<key>SpriteSheets/Global</key>
 		<dict>
 			<key>format_android</key>
@@ -92,10 +97,27 @@
 			<key>isSmartSpriteSheet</key>
 			<true/>
 			<key>previewFolderHidden</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>Sprites</key>
 		<dict/>
+		<key>bluebeastAssets</key>
+		<dict>
+			<key>format_android</key>
+			<integer>3</integer>
+			<key>format_android_dither</key>
+			<true/>
+			<key>format_ios</key>
+			<integer>3</integer>
+			<key>format_ios_dither</key>
+			<true/>
+			<key>isSmartSpriteSheet</key>
+			<true/>
+			<key>previewFolderHidden</key>
+			<true/>
+			<key>trimSprites</key>
+			<true/>
+		</dict>
 		<key>ccbResources</key>
 		<dict>
 			<key>previewFolderHidden</key>

@@ -14,6 +14,7 @@
 __weak CCNode* _levelNode;
 __weak CCPhysicsNode* _physicsNode;
 __weak CCNode* _playerNode;
+    __weak CCNode* _bufaloNode;
 __weak CCNode* _backgroundNode;
 }
 
@@ -29,9 +30,28 @@ __weak CCNode* _backgroundNode;
 -(void) loadLevelNamed:(NSString*)levelCCB
 {
     // get the current level's player in the scene by searching for it recursively
-    _playerNode = [self getChildByName:@"player" recursively:YES];
+        _playerNode = [self getChildByName:@"player" recursively:YES];
+        _bufaloNode = [self getChildByName:@"bufalo" recursively:YES];
    NSAssert1(_playerNode, @"player node not found in level: %@", levelCCB);
+     NSAssert1( _bufaloNode, @"player node not found in level: %@", levelCCB);
 }
+
+
+
+-(void) runBufalo{
+
+    // timelines can be referenced and run by name
+    [_bufaloNode.animationManager runAnimationsForSequenceNamed:@"Corre"];
+   // [self.animationManager runAnimationsForSequenceNamed:@"outro"];
+}
+
+-(void) stopBufalo{
+    
+    // timelines can be referenced and run by name
+    [_bufaloNode.animationManager runAnimationsForSequenceNamed:@"Para"];
+    // [self.animationManager runAnimationsForSequenceNamed:@"outro"];
+}
+
 
 - (void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
